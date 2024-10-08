@@ -268,8 +268,7 @@ runlookup:
 	mov	rsi, r12
 	mov	edx, [rbp + 40]
 	mov	r10, r13
-	xor	r8d, r8d
-	inc	r8d
+	mov	r8d, [rbp + 36]
 	mov	eax, __NR_renameat2
 	syscall
 	or	eax, eax
