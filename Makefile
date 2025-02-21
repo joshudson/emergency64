@@ -1,7 +1,7 @@
-all: chmod dropbuf env flushbuf mv ren rmdir sln unlink
+all: chmod dropbuf env flushbuf mv rdseedpw ren rmdir sln unlink
 
 clean:
-	rm -f chmod dropbuf env flushbuf mv ren rmdir sln unlink
+	rm -f chmod dropbuf env flushbuf mv rdseedpw ren rmdir sln unlink
 
 # Assembly-only tools
 
@@ -24,6 +24,10 @@ flushbuf: flushbuf.asm
 mv: mv.asm
 	nasm -f bin -o mv mv.asm
 	chmod +x mv
+
+rdseedpw: rdseedpw.asm
+	nasm -f bin -o rdseedpw rdseedpw.asm
+	chmod +x rdseedpw
 
 ren: ren.asm
 	nasm -f bin -o ren ren.asm

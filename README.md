@@ -49,6 +49,10 @@ Accepts a file or a device, flushes the write-behind buffer to disk using the `f
 
 Moves a file from one location on the disk to another location on the same disk.
 
+### rdseedpw
+
+Generates a password using the rdseed CPU instruction with 128 bits of entropy if you trust it.
+
 ### ren
 
 Performs a pattern-match rename. This is mostly a port (read: rebuild from the ground up) of the DOS ren command,
@@ -94,7 +98,7 @@ Yes. But monoculture is a bad thing. Having a few oddballs lying around can spar
 
 ### Isn't this a waste of disk space?
 
-It's 36kb on the EFI partition. It costs you nothing because an EFI partition has a minimum size that we can
+It's 40kb on the EFI partition. It costs you nothing because an EFI partition has a minimum size that we can
 calculate. For modern SSDs with 4K sectors, it's 16MB, and the boot tools only take up 6mb of that. To top it
 off, most systems create a 100MB EFI partition by default.
 
